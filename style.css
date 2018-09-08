@@ -6,3 +6,9 @@
   max-height: 400px;
   overflow: auto;
 }
+
+#roundedcorners {
+    border-radius: 5px;
+    padding: 1px;
+    margin: 5px;
+}
