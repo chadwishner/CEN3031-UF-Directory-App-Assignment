@@ -25,7 +25,7 @@
               <tr ng-repeat="listing in listings | filter:search" ng-click="showDetails($index)">
                 <td>{{listing.code}}</td>
                 <td>{{listing.name}}</td>
-                <td><button type="button" class="btn btn-danger" ng-click="deleteListing($index)">Remove Listing</button></td>
+                <td><button type="button" class="btn btn-danger btn-sm" ng-click="deleteListing($index)">Remove Listing</button></td>
             </table>
           </div>
              <form id="form">
@@ -34,7 +34,7 @@
                   <input type="text" placeholder="Latitude" id="roundedcorners" ng-model="latitude"><br>
                   <input type="text" placeholder="Longitude" id="roundedcorners" ng-model="longitude"><br>
                   <input type="text" placeholder="Address" id="roundedcorners" ng-model="address"><br>
-                  <input type="submit" value="Enter Listing" ng-click="addListing()">
+                  <td><button type="button" ng-click="addListing()" class="btn btn-success btn-sm">Enter Listing</button></td>
               </form>  
         </div>
         <div class="col-md-6">
