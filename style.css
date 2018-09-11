@@ -12,3 +12,8 @@
     padding: 1px;
     margin: 5px;
 }
+
+img.resize {
+  width:5%;
+  height:5%;
+}

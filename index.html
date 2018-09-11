@@ -7,7 +7,7 @@
   <body ng-app="directoryApp">
     <div class="container">
       <div class="row">
-        <h1>UF Directory App</h1>
+        <h1> <img class="resize" src="uf-university-of-florida.png"> Directory App</h1>
       </div>
       <div class="row" ng-controller="ListingsController">
         <div class="col-md-6">
@@ -20,6 +20,7 @@
               <tr>
                 <th>Code</th>
                 <th>Building Name</th>
+                <th>Remove</th>
                 <th></th>
               </tr>
               <tr ng-repeat="listing in listings | filter:search" ng-click="showDetails($index)">
@@ -29,12 +30,12 @@
             </table>
           </div>
              <form id="form">
-                  <input type="text" placeholder="Building Code" id="roundedcorners" ng-model="code"><br>
-                  <input type="text" placeholder="Building Name" id="roundedcorners" ng-model="name"><br>
+                  &emsp;&ensp;<input type="text" placeholder="Building Code" id="roundedcorners" ng-model="code">
+                  <input type="text" placeholder="Building Name" id="roundedcorners" ng-model="name">
                   <input type="text" placeholder="Latitude" id="roundedcorners" ng-model="latitude"><br>
-                  <input type="text" placeholder="Longitude" id="roundedcorners" ng-model="longitude"><br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="t`ext" placeholder="Longitude" id="roundedcorners" ng-model="longitude">
                   <input type="text" placeholder="Address" id="roundedcorners" ng-model="address"><br>
-                  <td><button type="button" ng-click="addListing()" class="btn btn-success btn-sm">Enter Listing</button></td>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<td><button type="button" ng-click="addListing()" class="btn btn-success btn-sm">Enter Listing</button></td>
               </form>  
         </div>
         <div class="col-md-6">
