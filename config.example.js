@@ -4,7 +4,7 @@
 
 module.exports = {
   db: {
-    uri: '', //place the URI of your mongo database here.
+    uri: 'mongodb://<dbuser>:<dbpassword>@ds161062.mlab.com:61062/uf-directory-app', //place the URI of your mongo database here.
   }
 };
 
