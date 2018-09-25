@@ -40,6 +40,29 @@ exports.read = function(req, res) {
 exports.update = function(req, res) {
   var listing = req.listing;
 
+  listing.code = req.body.code;
+  listing.name = req.body.name;
+
+
+/* CHECK */
+  if (req.response){
+    listing.coordinates = {
+      latitude: req.response.lat
+      longitude: req.response.lng
+    }
+  }
+
+  listing.address = req.body.address;
+
+  /* Then save the listing */
+  listing.save(function(err) {
+    if(err) {
+      console.log(err);
+      res.status(400).send(err);
+    } else {
+      res.json(listing);
+    }
+  });
   /** TODO **/
   /* Replace the article's properties with the new properties found in req.body */
   /* Save the article */
@@ -48,7 +71,9 @@ exports.update = function(req, res) {
 /* Delete a listing */
 exports.delete = function(req, res) {
   var listing = req.listing;
-
+  listing,remove(function(err){
+    res.json(listing);
+  });
   /** TODO **/
   /* Remove the article */
 };
@@ -57,6 +82,8 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) {
   /** TODO **/
   /* Your code here */
+  Listing..find().sort(function(a,b) {return (a.code > b.code) ? 1 : ((b.code > a.code) ? -1 : 0);});
+  response.send(listing);
 };
 
 /* 
