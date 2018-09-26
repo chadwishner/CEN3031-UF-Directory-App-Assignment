@@ -31,9 +31,14 @@ module.exports.init = function() {
 
   /**TODO 
   Go to homepage for all routes not specified */ 
-  app.all('/*', function(req, res){
-    res.sendFile(path.resolve('../../client/index.html'));
+  app.use(function(req, res, next){
+    return res.redirect('/');
+    next();
   });
+
+  // app.all('/*', function(req, res){
+  //   res.sendFile(path.resolve('../../client/index.html'));
+  // });
 
   return app;
 };  
